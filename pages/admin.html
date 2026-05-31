@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Admin Portal - MelaninGold Organic</title>
+  <meta name="description" content="MelaninGold Organic product management portal.">
+  <meta name="keywords" content="MelaninGold Organic, organic beauty Zanzibar, seaweed skincare, sea moss skincare, handmade skincare Tanzania, natural hair care, vegan beauty products, Zanzibar beauty products">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://melaningoldorganic.com/pages/admin.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Admin Portal - MelaninGold Organic">
+  <meta property="og:description" content="MelaninGold Organic product management portal.">
+  <meta property="og:image" content="https://melaningoldorganic.com/assets/images/hero/hero-desktop.webp">
+  <meta property="og:url" content="https://melaningoldorganic.com/pages/admin.html">
+  <meta property="og:site_name" content="MelaninGold Organic">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Admin Portal - MelaninGold Organic">
+  <meta name="twitter:description" content="MelaninGold Organic product management portal.">
+  <meta name="twitter:image" content="https://melaningoldorganic.com/assets/images/hero/hero-desktop.webp">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<!-- Admin Header -->
+<header class="admin-header" role="banner">
+  <div>
+    <span class="admin-logo" style="display:flex;align-items:center;gap:12px;">
+      <img src="../assets/images/branding/logo-nav.webp"
+           alt="MelaninGold Organic" width="110" height="37" loading="eager"
+           style="height:37px;width:auto;filter:brightness(1.08) drop-shadow(0 0 5px rgba(201,148,58,0.2));">
+      <span>Admin Portal</span>
+    </span>
+  </div>
+  <nav aria-label="Admin actions" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+    <button id="btn-reset" class="btn btn--ghost btn--sm">Reset to Defaults</button>
+    <a href="../index.html" class="btn btn--ghost btn--sm">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      Back to Site
+    </a>
+  </nav>
+</header>
+
+<main class="admin-page">
+
+  <!-- Stats bar -->
+  <section aria-label="Statistics">
+    <div class="admin-stats" role="list">
+      <div class="stat-card" role="listitem">
+        <p class="stat-card__label">Total Products</p>
+        <p class="stat-card__value" id="stat-total" aria-live="polite">—</p>
+      </div>
+      <div class="stat-card" role="listitem">
+        <p class="stat-card__label">Price Range</p>
+        <p class="stat-card__value" id="stat-range"
+           aria-live="polite" style="font-size:17px;margin-top:6px;">—</p>
+      </div>
+      <div class="stat-card" role="listitem">
+        <p class="stat-card__label">Categories</p>
+        <p class="stat-card__value" id="stat-cats" aria-live="polite">—</p>
+      </div>
+      <div class="stat-card" role="listitem">
+        <p class="stat-card__label">Store Status</p>
+        <p class="stat-card__value stat-card__value--live" id="stat-status" aria-live="polite">—</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product library -->
+  <section aria-labelledby="library-heading">
+    <div class="admin-actions">
+      <div>
+        <h1 id="library-heading"
+            style="font-family:var(--font-serif);font-size:26px;font-weight:300;color:var(--white);">
+          Products <em style="font-style:italic;color:var(--gold-light);">Library</em>
+        </h1>
+        <p style="font-size:13px;color:var(--muted);margin-top:6px;">
+          Click <strong style="color:var(--white);font-weight:400;">Edit</strong> to update ·
+          <strong style="color:var(--white);font-weight:400;">Add Product</strong> to create a new one
+        </p>
+      </div>
+      <button onclick="MG.Admin.openAddModal()" class="btn btn--gold">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="12" y1="5" x2="12" y2="19"/>
+          <line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+        Add Product
+      </button>
+    </div>
+
+    <div class="admin-grid" id="admin-grid" aria-label="Product management grid"
+         aria-live="polite">
+      <!-- Rendered by MG.Admin.init() -->
+    </div>
+  </section>
+
+</main>
+
+<!-- ========== ADD / EDIT PRODUCT MODAL ========== -->
+<div class="modal-overlay" id="product-modal"
+     role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal">
+    <div class="modal__head">
+      <h2 class="modal__title" id="modal-title">Add Product</h2>
+      <button class="modal__close" onclick="MG.Admin.closeModal()"
+              aria-label="Close modal">&times;</button>
+    </div>
+
+    <form id="product-form" novalidate>
+      <input type="hidden" id="form-product-id">
+      <input type="hidden" id="current-image-url">
+
+      <!-- Photo upload -->
+      <div class="upload-zone" id="upload-zone"
+           role="button" aria-label="Tap to upload product photo">
+        <input type="file" id="photo-upload" accept="image/*"
+               onchange="MG.Admin.handleImageUpload(this)"
+               aria-label="Choose product image">
+        <div class="upload-zone__icon" aria-hidden="true">📷</div>
+        <p class="upload-zone__text">Tap to upload photo</p>
+        <p class="upload-zone__hint">JPG, PNG, WEBP · Max 10 MB</p>
+      </div>
+      <img class="upload-preview" id="upload-preview"
+           alt="Uploaded product preview" loading="lazy" width="540" height="200">
+
+      <!-- Fields -->
+      <div class="form-group">
+        <label class="form-label" for="form-name">Product Name <span aria-hidden="true">*</span></label>
+        <input class="form-input" type="text" id="form-name"
+               placeholder="e.g. Seaweed Body Butter" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="form-price">Price (TZS) <span aria-hidden="true">*</span></label>
+        <input class="form-input" type="number" id="form-price"
+               placeholder="e.g. 45000" min="0" step="1000" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="form-category">Category <span aria-hidden="true">*</span></label>
+        <select class="form-input" id="form-category" required>
+          <option value="">Select category…</option>
+          <option value="skin">Skin</option>
+          <option value="hair">Hair</option>
+          <option value="body">Body</option>
+          <option value="bundle">Bundle</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="form-description">Description</label>
+        <textarea class="form-input" id="form-description" rows="4"
+                  placeholder="Describe the product — ingredients, benefits, how to use…"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="form-tags">Tags <span style="font-weight:300;text-transform:none;">(comma separated)</span></label>
+        <input class="form-input" type="text" id="form-tags"
+               placeholder="e.g. Organic, 200ml, Vegan-Collagen">
+      </div>
+
+      <div style="display:flex;gap:12px;margin-top:8px;flex-wrap:wrap;">
+        <button type="submit" class="btn btn--gold" style="flex:1;min-width:140px;">
+          Save Product
+        </button>
+        <button type="button" onclick="MG.Admin.closeModal()"
+                class="btn btn--ghost">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Toast container -->
+<div class="toast-container" aria-live="polite"></div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2024 MelaninGold Organic. All rights reserved.</p>
+      <p class="footer-credit">Site by <a href="https://umojaserv.com/" target="_blank" rel="noopener">Umojaserv</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/sheets.js"></script>
+<script src="../assets/js/products.js"></script>
+<script src="../assets/js/cart.js"></script>
+<script src="../assets/js/admin.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

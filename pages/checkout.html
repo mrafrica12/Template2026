@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Order Summary - MelaninGold Organic | WhatsApp Checkout</title>
+  <meta name="description" content="Complete your MelaninGold Organic order details, submit your order, and continue to WhatsApp confirmation.">
+  <meta name="keywords" content="MelaninGold Organic, organic beauty Zanzibar, seaweed skincare, sea moss skincare, handmade skincare Tanzania, natural hair care, vegan beauty products, Zanzibar beauty products">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://melaningoldorganic.com/pages/checkout.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Order Summary - MelaninGold Organic | WhatsApp Checkout">
+  <meta property="og:description" content="Complete your MelaninGold Organic order details, submit your order, and continue to WhatsApp confirmation.">
+  <meta property="og:image" content="https://melaningoldorganic.com/assets/images/hero/hero-desktop.webp">
+  <meta property="og:url" content="https://melaningoldorganic.com/pages/checkout.html">
+  <meta property="og:site_name" content="MelaninGold Organic">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Order Summary - MelaninGold Organic | WhatsApp Checkout">
+  <meta name="twitter:description" content="Complete your MelaninGold Organic order details, submit your order, and continue to WhatsApp confirmation.">
+  <meta name="twitter:image" content="https://melaningoldorganic.com/assets/images/hero/hero-desktop.webp">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <a href="../index.html" class="nav-logo"><img src="../assets/images/branding/logo-nav.webp" alt="MelaninGold Organic" width="216" height="144" loading="eager"></a>
+    <div class="nav-links" role="list">
+      <a href="../index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="btn-cart" aria-label="Open shopping cart">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        Cart <span class="cart-badge" aria-label="items in cart"></span>
+      </button>
+    </div>
+    <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-mobile-menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<nav class="nav-mobile-menu" id="nav-mobile-menu" aria-label="Mobile navigation">
+  <a href="../index.html">Home</a><a href="shop.html">Shop</a>
+  <a href="about.html">About</a><a href="contact.html">Contact</a>
+</nav>
+<div class="nav-spacer"></div>
+
+<header class="page-header">
+  <div class="container">
+    <p class="t-eyebrow t-eyebrow--center">Complete Your Order</p>
+    <h1>Order <em>Summary</em></h1>
+    <p>Fill in your details and we'll confirm via WhatsApp.</p>
+  </div>
+</header>
+
+<section class="section" style="background:var(--off-black);">
+  <div class="container">
+
+    <!-- Empty cart state -->
+    <div id="checkout-empty" class="hidden" style="text-align:center;padding:80px 0;">
+      <svg width="52" height="52" viewBox="0 0 24 24" fill="none"
+           stroke="var(--border-strong)" stroke-width="1"
+           style="margin:0 auto 24px;" aria-hidden="true">
+        <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+      </svg>
+      <p style="font-family:var(--font-serif);font-size:24px;font-weight:300;
+                color:var(--muted);margin-bottom:12px;">Your cart is empty</p>
+      <p style="font-size:14px;color:var(--gold-dim);margin-bottom:32px;">
+        Add some products before checking out.
+      </p>
+      <a href="shop.html" class="btn btn--gold">Browse Products</a>
+    </div>
+
+    <!-- Checkout form (shown when cart has items) -->
+    <div id="checkout-form-wrap">
+      <div class="checkout-grid">
+
+        <!-- Left: Customer details -->
+        <div>
+          <div class="checkout-box">
+            <h2 class="checkout-box__title">Your Details</h2>
+            <form id="checkout-form" novalidate>
+
+              <div class="form-group">
+                <label class="form-label" for="co-name">Full Name <span aria-hidden="true">*</span></label>
+                <input class="form-input" type="text" id="co-name"
+                       autocomplete="name" placeholder="Your full name" required>
+                <span class="form-error" id="co-name-error" hidden></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="co-phone">Phone / WhatsApp <span aria-hidden="true">*</span></label>
+                <input class="form-input" type="tel" id="co-phone"
+                       autocomplete="tel" placeholder="+255 7XX XXX XXX" required>
+                <span class="form-error" id="co-phone-error" hidden></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="co-address">Delivery Address <span aria-hidden="true">*</span></label>
+                <textarea class="form-input" id="co-address" rows="3"
+                          autocomplete="street-address"
+                          placeholder="Street, area, city, Tanzania" required></textarea>
+                <span class="form-error" id="co-address-error" hidden></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="co-notes">Additional Notes</label>
+                <textarea class="form-input" id="co-notes" rows="2"
+                          placeholder="Any special requests or instructions"></textarea>
+              </div>
+
+              <div style="background:var(--off-black);border:1px solid var(--border);
+                          padding:20px;margin-bottom:28px;border-radius:var(--radius);">
+                <p style="font-size:13px;color:var(--muted);line-height:1.8;">
+                  <strong style="color:var(--gold-light);">How it works:</strong><br>
+                  Clicking the button below saves your order first, then gives you a WhatsApp confirmation link.
+                  If the save step fails, you can still continue to WhatsApp so the order is not lost.
+                </p>
+              </div>
+
+              <button type="submit" class="btn btn--wa btn--lg btn--full">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.935 1.395 5.608L.057 23.882l6.445-1.313A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.893 9.893 0 0 1-5.031-1.369l-.361-.214-3.741.981.998-3.648-.235-.374A9.861 9.861 0 0 1 2.106 12C2.106 6.525 6.525 2.106 12 2.106S21.894 6.525 21.894 12 17.475 21.894 12 21.894z"/>
+                </svg>
+                Submit Order
+              </button>
+              <div class="form-success" id="checkout-submit-message" hidden>
+                <p></p>
+                <a id="checkout-whatsapp-link" href="https://wa.me/255767954679"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn--wa btn--full">Continue to WhatsApp</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right: Order summary -->
+        <div>
+          <div class="checkout-box">
+            <h2 class="checkout-box__title">Your Order</h2>
+            <div id="order-summary-rows" aria-label="Order items"></div>
+            <div class="total-row">
+              <span class="total-label">Total</span>
+              <span class="total-amount" id="checkout-total">Sh 0</span>
+            </div>
+            <p style="font-size:12px;color:var(--gold-dim);line-height:1.7;margin-bottom:20px;">
+              Prices in Tanzanian Shillings (TZS). Delivery fee confirmed on WhatsApp.
+            </p>
+            <button id="btn-clear-cart" class="btn btn--ghost btn--sm btn--full">
+              Clear Cart
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2024 MelaninGold Organic. All rights reserved.</p>
+      <p class="footer-credit">Site by <a href="https://umojaserv.com/" target="_blank" rel="noopener">Umojaserv</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" aria-hidden="true"></div>
+<aside class="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart">
+  <div class="cart-drawer__head">
+    <h2 class="cart-drawer__title">Your Cart</h2>
+    <button class="cart-close" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="cart-drawer__body" aria-live="polite"></div>
+  <div class="cart-drawer__foot">
+    <div class="cart-total-row">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-amount">Sh 0</span>
+    </div>
+    <p class="cart-wa-note">Orders confirmed via WhatsApp.</p>
+    <a href="checkout.html" class="btn btn--gold btn--full">Proceed to Order</a>
+  </div>
+</aside>
+
+<script src="../assets/js/sheets.js"></script>
+<script src="../assets/js/products.js"></script>
+<script src="../assets/js/cart.js"></script>
+<script src="../assets/js/admin.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
