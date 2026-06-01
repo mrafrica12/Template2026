@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Order Summary - MelaninGold Organic | Checkout</title>
+  <meta name="description" content="Complete your MelaninGold Organic order details, submit your order, and choose WhatsApp confirmation if needed.">
+  <meta name="keywords" content="MelaninGold Organic, organic beauty Zanzibar, seaweed skincare, sea moss skincare, handmade skincare Tanzania, natural hair care, vegan beauty products, Zanzibar beauty products">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://melaningoldorganic.com/pages/checkout.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Order Summary - MelaninGold Organic | Checkout">
+  <meta property="og:description" content="Complete your MelaninGold Organic order details, submit your order, and choose WhatsApp confirmation if needed.">
+  <meta property="og:image" content="https://melaningoldorganic.com/assets/images/hero/hero-desktop.webp">
+  <meta property="og:url" content="https://melaningoldorganic.com/pages/checkout.html">
+  <meta property="og:site_name" content="MelaninGold Organic">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Order Summary - MelaninGold Organic | Checkout">
+  <meta name="twitter:description" content="Complete your MelaninGold Organic order details, submit your order, and choose WhatsApp confirmation if needed.">
+  <meta name="twitter:image" content="https://melaningoldorganic.com/assets/images/hero/hero-desktop.webp">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <a href="../index.html" class="nav-logo"><img src="../assets/images/branding/logo-nav.webp" alt="MelaninGold Organic" width="216" height="144" loading="eager"></a>
+    <div class="nav-links" role="list">
+      <a href="../index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="btn-cart" aria-label="Open shopping cart">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        Cart <span class="cart-badge" aria-label="items in cart"></span>
+      </button>
+    </div>
+    <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-mobile-menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<nav class="nav-mobile-menu" id="nav-mobile-menu" aria-label="Mobile navigation">
+  <a href="../index.html">Home</a><a href="shop.html">Shop</a>
+  <a href="about.html">About</a><a href="contact.html">Contact</a>
+</nav>
+<div class="nav-spacer"></div>
+
+<header class="page-header">
+  <div class="container">
+    <p class="t-eyebrow t-eyebrow--center">Complete Your Order</p>
+    <h1>Order <em>Summary</em></h1>
+    <p>Fill in your details and place your order.</p>
+  </div>
+</header>
+
+<section class="section" style="background:var(--off-black);">
+  <div class="container">
+
+    <!-- Empty cart state -->
+    <div id="checkout-empty" class="hidden" style="text-align:center;padding:80px 0;">
+      <svg width="52" height="52" viewBox="0 0 24 24" fill="none"
+           stroke="var(--border-strong)" stroke-width="1"
+           style="margin:0 auto 24px;" aria-hidden="true">
+        <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+      </svg>
+      <p style="font-family:var(--font-serif);font-size:24px;font-weight:300;
+                color:var(--muted);margin-bottom:12px;">Your cart is empty</p>
+      <p style="font-size:14px;color:var(--gold-dim);margin-bottom:32px;">
+        Add some products before checking out.
+      </p>
+      <a href="shop.html" class="btn btn--gold">Browse Products</a>
+    </div>
+
+    <!-- Checkout form (shown when cart has items) -->
+    <div id="checkout-form-wrap">
+      <div class="checkout-grid">
+
+        <!-- Left: Customer details -->
+        <div>
+          <div class="checkout-box">
+            <h2 class="checkout-box__title">Your Details</h2>
+            <form id="checkout-form" novalidate>
+
+              <div class="form-group">
+                <label class="form-label" for="co-name">Full Name <span aria-hidden="true">*</span></label>
+                <input class="form-input" type="text" id="co-name"
+                       autocomplete="name" placeholder="Your full name" required>
+                <span class="form-error" id="co-name-error" hidden></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="co-phone">Phone / WhatsApp <span aria-hidden="true">*</span></label>
+                <input class="form-input" type="tel" id="co-phone"
+                       autocomplete="tel" placeholder="+255 7XX XXX XXX" required>
+                <span class="form-error" id="co-phone-error" hidden></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="co-address">Delivery Address <span aria-hidden="true">*</span></label>
+                <textarea class="form-input" id="co-address" rows="3"
+                          autocomplete="street-address"
+                          placeholder="Street, area, city, Tanzania" required></textarea>
+                <span class="form-error" id="co-address-error" hidden></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="co-notes">Additional Notes</label>
+                <textarea class="form-input" id="co-notes" rows="2"
+                          placeholder="Any special requests or instructions"></textarea>
+              </div>
+
+              <div style="background:var(--off-black);border:1px solid var(--border);
+                          padding:20px;margin-bottom:28px;border-radius:var(--radius);">
+                <p style="font-size:13px;color:var(--muted);line-height:1.8;">
+                  <strong style="color:var(--gold-light);">How it works:</strong><br>
+                  Clicking the button below sends your order to our order sheet first.
+                  After that, you can continue to WhatsApp only if you want to confirm directly.
+                </p>
+              </div>
+
+              <button type="submit" class="btn btn--gold btn--lg btn--full">
+                Place Order
+              </button>
+              <div class="form-success" id="checkout-submit-message" hidden>
+                <p></p>
+                <a id="checkout-whatsapp-link" href="https://wa.me/255767954679"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn--wa btn--full">Continue to WhatsApp</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right: Order summary -->
+        <div>
+          <div class="checkout-box">
+            <h2 class="checkout-box__title">Your Order</h2>
+            <div id="order-summary-rows" aria-label="Order items"></div>
+            <div class="total-row">
+              <span class="total-label">Total</span>
+              <span class="total-amount" id="checkout-total">Sh 0</span>
+            </div>
+            <p style="font-size:12px;color:var(--gold-dim);line-height:1.7;margin-bottom:20px;">
+              Prices in Tanzanian Shillings (TZS). Delivery fee confirmed on WhatsApp.
+            </p>
+            <button id="btn-clear-cart" class="btn btn--ghost btn--sm btn--full">
+              Clear Cart
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2024 MelaninGold Organic. All rights reserved.</p>
+      <p class="footer-credit">Site by <a href="https://umojaserv.com/" target="_blank" rel="noopener">Umojaserv</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" aria-hidden="true"></div>
+<aside class="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart">
+  <div class="cart-drawer__head">
+    <h2 class="cart-drawer__title">Your Cart</h2>
+    <button class="cart-close" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="cart-drawer__body" aria-live="polite"></div>
+  <div class="cart-drawer__foot">
+    <div class="cart-total-row">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-amount">Sh 0</span>
+    </div>
+    <p class="cart-wa-note">Place your order first. WhatsApp confirmation is optional after submission.</p>
+    <a href="checkout.html" class="btn btn--gold btn--full">Proceed to Order</a>
+  </div>
+</aside>
+
+<script src="../assets/js/sheets.js"></script>
+<script src="../assets/js/products.js"></script>
+<script src="../assets/js/cart.js"></script>
+<script src="../assets/js/admin.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
